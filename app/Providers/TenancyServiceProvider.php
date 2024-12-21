@@ -127,7 +127,7 @@ class TenancyServiceProvider extends ServiceProvider
         $this->app->booted(function () {
             if (file_exists(base_path('routes/tenants/routes.php'))) {
                 Route::namespace(static::$controllerNamespace)
-                    ->group(base_path(path: 'routes/tenant.php'));
+                    ->group(base_path(path: 'routes/tenants/routes.php'));
             }
         });
     }
