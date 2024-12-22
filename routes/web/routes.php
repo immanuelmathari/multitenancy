@@ -11,4 +11,8 @@ foreach (config('tenancy.central_domains') as $domain) {
     });
 }
 
+Route::middleware('tenant')->group(function () {
+    require base_path('routes/tenants/routes.php');
+});
+
 
